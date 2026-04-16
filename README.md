@@ -4,7 +4,7 @@
 
 ![explainThis Input](docs/screenshot.png)
 
-**Live:** [explainThis on Netlify](https://explainthis.netlify.app)
+**Live:** [explainThis on Netlify](https://explainthismvp.netlify.app/)
 
 ---
 
