@@ -94,9 +94,8 @@ export const useGemini = () => {
     try {
       const prompt = generatePrompt(userInput, level);
       
-      // Use gemini-2.0-flash-exp (remove the extra colon)
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
         {
           method: 'POST',
           headers: {
