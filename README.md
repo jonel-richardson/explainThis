@@ -2,6 +2,8 @@
 
 > AI-powered jargon translator that explains any technical term at five complexity levels — from "explain it like I'm five" to deep technical precision.
 
+![explainThis Input](docs/screenshot.png)
+
 **Live:** [explainThis on Netlify](https://explainthis.netlify.app)
 
 ---
