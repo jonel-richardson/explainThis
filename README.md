@@ -2,8 +2,6 @@
 
 > AI-powered jargon translator that explains any technical term at five complexity levels — from "explain it like I'm five" to deep technical precision.
 
-![explainThis demo](docs/demo.gif)
-
 **Live:** [explainThis on Netlify](https://explainthis.netlify.app)
 
 ---
@@ -132,4 +130,4 @@ Built as a solo project for the **Pursuit Fellowship** (Full Stack Web Developme
 
 ---
 
-Built by [Jonel Richardson](https://linkedin.com/in/jonelrichardson)
+Built by [Jonel Richardson](https://linkedin.com/in/jonel-richardson-09a399382)
