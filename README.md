@@ -36,7 +36,7 @@ Paste any technical term or confusing snippet — "What is a RESTful API?" or "m
 | Frontend | React 19 | Component model maps cleanly to the multi-section explanation cards; hooks handle API state without a state library |
 | Build Tool | Vite 7 | Sub-second HMR during development and optimized production builds — no Webpack configuration overhead |
 | Styling | Tailwind CSS 3 | Utility classes enable rapid prototyping of the level-colored UI system without writing custom CSS for every variant |
-| AI | Google Gemini 2.0 Flash | Structured prompt engineering produces consistent 5-section responses; Gemini's speed and free tier make it ideal for a learning tool with frequent API calls |
+| AI | Groq (Llama 3.3 70B Versatile) | Structured prompt engineering produces consistent 5-section responses; Groq's fast inference and free tier make it ideal for a learning tool with frequent API calls |
 | Icons | Lucide React | Tree-shakeable SVG icons that match the minimal UI aesthetic |
 | Deployment | Netlify | Zero-config deploys from Git with environment variable management for the API key |
 
@@ -45,7 +45,7 @@ Paste any technical term or confusing snippet — "What is a RESTful API?" or "m
 ```
 ┌──────────┐     ┌─────────────────────────────────┐     ┌─────────────┐
 │          │     │           Frontend (React)        │     │             │
-│   User   │────>│                                   │────>│  Gemini API │
+│   User   │────>│                                   │────>│   Groq API  │
 │          │     │  TextInput ─> LevelSelector       │     │             │
 └──────────┘     │       ─> ExplainButton            │     │  Generates  │
                  │                                   │<────│  structured │
@@ -61,7 +61,7 @@ Paste any technical term or confusing snippet — "What is a RESTful API?" or "m
 User Input ──> Extract Technical Term ──> Generate Level-Specific Prompt
                                                     │
                                                     v
-                                              Gemini API
+                                               Groq API
                                                     │
                                                     v
                                           Parse Structured Response
@@ -91,7 +91,7 @@ User Input ──> Extract Technical Term ──> Generate Level-Specific Prompt
 
 ### Prerequisites
 - Node.js 18+
-- A Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey)
+- A Groq API key from [Groq Console](https://console.groq.com/keys)
 
 ### Installation
 ```bash
@@ -103,7 +103,7 @@ npm install
 ### Environment Variables
 Create a `.env` file in the project root:
 ```
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_GROQ_API_KEY=your_groq_api_key_here
 ```
 
 ### Run Locally

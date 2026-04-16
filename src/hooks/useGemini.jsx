@@ -83,30 +83,30 @@ export const useGemini = () => {
     setIsLoading(true);
     setError(null);
 
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    
+    const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+
     if (!apiKey) {
       setError('API key is missing!');
       setIsLoading(false);
       return null;
     }
-    
+
     try {
       const prompt = generatePrompt(userInput, level);
-      
+
       const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        'https://api.groq.com/openai/v1/chat/completions',
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
           },
           body: JSON.stringify({
-            contents: [{
-              parts: [{
-                text: prompt
-              }]
-            }]
+            model: 'llama-3.3-70b-versatile',
+            messages: [
+              { role: 'user', content: prompt }
+            ]
           })
         }
       );
@@ -117,7 +117,7 @@ export const useGemini = () => {
       }
 
       const data = await response.json();
-      const text = data.candidates[0].content.parts[0].text;
+      const text = data.choices[0].message.content;
       const parsedExplanation = parseResponse(text);
 
       const explanation = {
@@ -135,7 +135,7 @@ export const useGemini = () => {
       return explanation;
 
     } catch (err) {
-      console.error('Gemini API Error:', err);
+      console.error('Groq API Error:', err);
       setError(err.message || 'Failed to generate explanation');
       setIsLoading(false);
       return null;
