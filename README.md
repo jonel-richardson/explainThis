@@ -95,7 +95,7 @@ User Input ──> Extract Technical Term ──> Generate Level-Specific Prompt
 
 ### Installation
 ```bash
-git clone https://github.com/jonelrichardson-spec/explainThis.git
+git clone https://github.com/jonelrichardson/explainThis.git
 cd explainThis/explainThis
 npm install
 ```
@@ -132,4 +132,4 @@ Built as a solo project for the **Pursuit Fellowship** (Full Stack Web Developme
 
 ---
 
-Built by [Jonel Richardson](https://linkedin.com/in/jonel-richardson-09a399382)
+Built by [Jonel Richardson](https://linkedin.com/in/jonel-richardson)
